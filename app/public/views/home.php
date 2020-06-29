@@ -1,1 +1,6 @@
-<h2>Home</h2>
+<?php
+  require("assets/header.php");
+  require("assets/nav.php");
+?>
+</body>
+</html>
