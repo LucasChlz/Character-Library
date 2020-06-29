@@ -14,4 +14,10 @@ $router->get('/','HomeController:index');
 $router->get('/register','HomeController:register');
 $router->post('/register','HomeController:register');
 
+$router->get('/login','HomeController:login');
+$router->post('/login','HomeController:login');
+
+$router->group('/home');
+$router->get('/','LibraryController:index');
+
 $router->dispatch();
