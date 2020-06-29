@@ -1,1 +1,0 @@
-<h2>Welcome <?= $_SESSION['nickname']; ?></h2>

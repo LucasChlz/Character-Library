@@ -23,8 +23,11 @@ class HomeController
         {
             $this->userModel->register($data['name'],$data['email'],$data['password']);
         }
-
-        include($this->view.'/register.php');
+        if(isset($_SESSION['logged'])){
+            header('Location: '.URL);
+        }else {
+            include($this->view.'/register.php');
+        }
     }
 
     public function login($data) {
@@ -32,7 +35,11 @@ class HomeController
         {
             $this->userModel->login($data['email'],$data['password']);
         }
+        if(isset($_SESSION['logged'])){
+            header('Location: '.URL);
+        }else {
+            include($this->view.'/login.php');
+        }
 
-        include($this->view.'/login.php');
     }
 }

@@ -1,6 +1,6 @@
 <?php
-  require("assets/header.php");
-  require("assets/nav.php");
+  require_once("assets/header.php");
+  require_once("assets/nav.php");
 ?>
 </body>
 </html>

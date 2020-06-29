@@ -19,5 +19,6 @@ $router->post('/login','HomeController:login');
 
 $router->group('/home');
 $router->get('/','LibraryController:index');
+$router->get('/loggout','LibraryController:loggout');
 
 $router->dispatch();

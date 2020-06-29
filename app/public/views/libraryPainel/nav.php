@@ -6,11 +6,6 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav mr-sm-2">
-      <li class="nav-item <?php if($_GET['url'] == ""){
-        echo 'active';
-      } ?>">
-        <a class="nav-link" href="#">Home</a>
-      </li>
       <li class="nav-item">
           <?php if(!isset($_SESSION['logged'])){ ?>
             <a class="nav-link" href="login">Login</a>

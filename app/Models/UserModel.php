@@ -52,6 +52,14 @@ class UserModel
         }
     }
 
+    public function loggout()
+    {
+        session_unset();
+        session_destroy();
+        header('Location: '.URL);
+        die();
+    }
+
     public function verifyEmail($email) {
         $sql = \App\Database\Sql::connect()->prepare("SELECT * FROM `tb_users` WHERE email = ?");
         $sql->execute(array($email));
