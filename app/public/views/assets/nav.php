@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-  <a class="navbar-brand" href="#">Character Library</a>
+  <a class="navbar-brand" href="<?= URL ?>">Character Library</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -13,14 +13,14 @@
       </li>
       <li class="nav-item">
           <?php if(!isset($_SESSION['logged'])){ ?>
-            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link" href="login">Login</a>
           <?php }else{ ?>
             <a class="nav-link" href="#">Library</a>
           <?php } ?>
       </li>
       <li class="nav-item">
           <?php if(!isset($_SESSION['logged'])){ ?>
-            <a class="nav-link" href="#">SignUp</a>
+            <a class="nav-link" href="register">SignUp</a>
           <?php } ?>
       </li>
       <?php if(isset($_SESSION['logged'])){ ?>

@@ -11,4 +11,7 @@ $router->namespace("App\Controllers");
 $router->group('/');
 $router->get('/','HomeController:index');
 
+$router->get('/register','HomeController:register');
+$router->post('/register','HomeController:register');
+
 $router->dispatch();
