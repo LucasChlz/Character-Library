@@ -5,10 +5,12 @@ namespace App\Controllers;
 class CharacterController
 {
     private $characterView;
+    private $characterModel;
 
     public function __construct()
     {
         $this->characterView = 'app/public/views/libraryPainel/character';
+        $this->characterModel = new \App\Models\CharacterModel;
     } 
 
     public function index($data)
@@ -25,7 +27,13 @@ class CharacterController
         if(!isset($_SESSION['logged'])) {
           header('Location: '.URL);
           die();
+        }else{
+            if(isset($_POST['create']))
+            {
+                $img = $_FILES['img'];
+                $this->characterModel->create($data,$img);
+            }
+            include($this->characterView.'/character-create.php');
         }
-        include($this->characterView.'/character-create.php');
     }
 }

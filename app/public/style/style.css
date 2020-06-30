@@ -10,6 +10,7 @@
   height: 100%;
   background: #151719;
   left: -200px;
+  z-index: 3;
   transition: 0.5s;
 }
 
@@ -28,6 +29,6 @@
 #sidebar .btn {
   position: absolute;
   left: 200px;
-  top: 0px;
+  top: 10px;
 }
 

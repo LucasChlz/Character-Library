@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class UserModel
+class UserModel extends GeneralModel
 {
     public function register($name,$email,$password) {
         if($name == "" || $email == "" || $password == "") {
@@ -68,11 +68,6 @@ class UserModel
         }else{
             return false;
         }
-    }
-
-    
-    public function alert($msg) {
-        echo "<script>alert('$msg')</script>";
     }
 
 }

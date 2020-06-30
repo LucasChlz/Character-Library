@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-dark  bg-dark">
   <div class="container">
   <a class="navbar-brand" href="<?= URL ?>">Character Library</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,7 +10,7 @@
           <?php if(!isset($_SESSION['logged'])){ ?>
             <a class="nav-link" href="login">Login</a>
           <?php }else{ ?>
-            <a class="nav-link" href="home">Library</a>
+            <a class="nav-link" href="<?= URL ?>/home">Library</a>
           <?php } ?>
       </li>
       <li class="nav-item">
@@ -32,3 +32,5 @@
   </div>
   </div>
 </nav>
+<br>
+<br>
