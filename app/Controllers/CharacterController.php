@@ -12,7 +12,20 @@ class CharacterController
     } 
 
     public function index($data)
-    {
+    {   
+        if(!isset($_SESSION['logged'])) {
+            header('Location: '.URL);
+            die();
+        }
         include($this->characterView.'/character-view.php');
+    }
+
+    public function create($data)
+    {
+        if(!isset($_SESSION['logged'])) {
+          header('Location: '.URL);
+          die();
+        }
+        include($this->characterView.'/character-create.php');
     }
 }

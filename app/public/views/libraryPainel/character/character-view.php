@@ -10,7 +10,7 @@
     <p class="lead">Here you can create and store your characters</p>
     <hr class="my-4">
     <p>click here to create a new character</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Create Character</a>
+    <a class="btn btn-primary btn-lg" href="character/create" role="button">Create Character</a>
   </div>
 </div>
 <script src="<?= URL_APP; ?>/public/js/sidebar.js"></script>
