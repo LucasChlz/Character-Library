@@ -21,4 +21,7 @@ $router->group('/home');
 $router->get('/','LibraryController:index');
 $router->get('/loggout','LibraryController:loggout');
 
+$router->group('/character');
+$router->get('/','CharacterController:index');
+
 $router->dispatch();
