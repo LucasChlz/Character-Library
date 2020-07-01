@@ -19,6 +19,7 @@ class CharacterController
             header('Location: '.URL);
             die();
         }
+        $characters = $this->characterModel->listChar()->fetch();
         include($this->characterView.'/character-view.php');
     }
 
@@ -36,4 +37,15 @@ class CharacterController
             include($this->characterView.'/character-create.php');
         }
     }
+
+    public function view($data)
+    {
+        if(!isset($_SESSION['logged'])) {
+            header('Location: '.URL);
+            die();
+        }else{
+            include($this->characterView.'/character-single.php');
+        }
+    }
+
 }

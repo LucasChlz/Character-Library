@@ -15,7 +15,7 @@ class GeneralModel
     public function uploadImages($img) {
         $typeValidate = array('image/png','image/jpeg','image/jpg','image/gif');
         if(in_array($img['type'],$typeValidate)){
-            if($img['size'] < 20000) {
+            if($img['size'] < 100000) {
                 $imgType = explode('.',$img['name']);
                 $imgName = uniqid().'.'.$imgType[1];
                 $this->uploadFile = $this->uploadDir.$imgName;
@@ -24,9 +24,11 @@ class GeneralModel
                 }
             }else{
                 $this->alert("the image is very big");
+                return false;
             }
         }else {
             $this->alert("invalid file please select a png, jpeg, jpg or gif file");
+            return false;
         }
     }
 

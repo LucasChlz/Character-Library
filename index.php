@@ -25,5 +25,6 @@ $router->group('/character');
 $router->get('/','CharacterController:index');
 $router->get('/create','CharacterController:create');
 $router->post('/create','CharacterController:create');
+$router->get('/{id}','CharacterController:view');
 
 $router->dispatch();

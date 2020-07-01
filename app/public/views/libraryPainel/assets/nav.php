@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark  bg-dark">
+<nav class="navbar navbar-expand-md fixed-top navbar-dark  bg-dark">
   <div class="container">
   <a class="navbar-brand" href="<?= URL ?>">Character Library</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
