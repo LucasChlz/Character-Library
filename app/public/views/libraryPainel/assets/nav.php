@@ -8,14 +8,14 @@
     <ul class="navbar-nav mr-sm-2">
       <li class="nav-item">
           <?php if(!isset($_SESSION['logged'])){ ?>
-            <a class="nav-link" href="login">Login</a>
+            <a class="nav-link" href="<?= URL; ?>/login">Login</a>
           <?php }else{ ?>
-            <a class="nav-link" href="<?= URL ?>/home">Library</a>
+            <a class="nav-link" href="<?= URL ?><?= URL; ?>/home">Library</a>
           <?php } ?>
       </li>
       <li class="nav-item">
           <?php if(!isset($_SESSION['logged'])){ ?>
-            <a class="nav-link" href="register">SignUp</a>
+            <a class="nav-link" href="<?= URL; ?>/register">SignUp</a>
           <?php } ?>
       </li>
       <?php if(isset($_SESSION['logged'])){ ?>

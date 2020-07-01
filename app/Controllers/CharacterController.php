@@ -19,7 +19,7 @@ class CharacterController
             header('Location: '.URL);
             die();
         }
-        $characters = $this->characterModel->listChar()->fetch();
+        $characters = $this->characterModel->listChar()->fetchAll();
         include($this->characterView.'/character-view.php');
     }
 

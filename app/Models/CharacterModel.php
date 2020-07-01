@@ -10,7 +10,7 @@ class CharacterModel extends GeneralModel
             $this->alert("fill all fields");
         }else{
             if($img = $this->uploadImages($img)){
-                $createDate = date('Y-m-d H:i:s');
+                $createDate = date('d/m/Y H:i:s');
                 $create = \App\Database\Sql::connect()->prepare("INSERT INTO `tb_characters` VALUES (null, ?,?,?,?,?,?,?,?,?,?,?,?,?)");
                 
                 if($create->execute(array($_SESSION['token'],$info['name'],$info['age'],$info['gender'],$info['scenario'],$info['background'],$info['appearance'],$info['annotations'],$info['items'],$info['defects'],$info['benefits'],$img,$createDate))){

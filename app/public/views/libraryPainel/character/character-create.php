@@ -46,7 +46,7 @@
     </div>
 
     <label for="exampleFormControlTextarea1">Background</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="background"></textarea>
+    <textarea id="textarea" class="form-control" id="exampleFormControlTextarea1" rows="5" name="background"></textarea>
 
   </div>
 

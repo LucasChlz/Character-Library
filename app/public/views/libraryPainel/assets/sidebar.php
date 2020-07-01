@@ -6,7 +6,7 @@
         </svg>
     </div>
     <ul>
-        <li><a href="character">Character</a></li>
+        <li><a href="<?= URL; ?>/character">Character</a></li>
         <li>Scenarios</li>
         <li>History</li>
     </ul>

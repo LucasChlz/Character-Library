@@ -14,24 +14,29 @@
   </div>
 </div>
 <div class="container">
+<?php foreach($characters as $key => $info){ ?>
 <div class="list-group">
-  <a href="character/<?= $characters['id']; ?>" class="list-group-item list-group-item-action active">
-    <img style="width: 200px;" src="app/public/images/<?= $characters['img']; ?>" class="rounded float-left w-40" alt="...">
+  <a href="<?= URL; ?>/character/view/<?=$info['id']; ?>" class="list-group-item list-group-item-action active">
+    <img style="width: 200px;" src="app/public/images/<?= $info['img']; ?>" class="rounded float-left w-40" alt="...">
     <div class="float-right d-flex w20">
-        <small>Created At: <?= $characters['created_at']; ?></small>
+        <small>Created At: <?= $info['created_at']; ?></small>
     </div>
     <div class="d-flex w-50">
-      <h5 class="mb-1 ml-4">Name: <?= $characters['name']; ?></h5>
-      <h5 class="mb-1 ml-4">Scenario: <?= $characters['scenario']; ?></h5>
+      <h5 class="mb-1 ml-4">Name: <?= $info['name']; ?></h5>
+      <h5 class="mb-1 ml-4">Scenario: <?= $info['scenario']; ?></h5>
     </div>
     <div class="d-flex w-50">
-      <h5 class="mb-1 ml-4">Age: <?= $characters['age']; ?></h5>
+      <h5 class="mb-1 ml-4">Age: <?= $info['age']; ?></h5>
     </div>
-    <div class="d-flex w-70">
-      <p class="mb-1 ml-4 mt-3"><?= $characters['background']; ?></p>
+    <div style="word-break:break-word;" class="d-flex w-70 p-3">
+      <div class="container">
+          <?= mb_strimwidth($info['background'],100, 250,"..."); ?>
+       </div>
     </div> 
   </a>
 </div>
+<br>
+<?php } ?>
 </div>
 <script src="<?= URL_APP; ?>/public/js/sidebar.js"></script>
 </body>
